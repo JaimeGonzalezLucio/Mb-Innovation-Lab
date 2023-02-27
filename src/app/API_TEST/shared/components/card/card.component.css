@@ -1,0 +1,349 @@
+
+
+:root{    
+    /* --bg-principal: #1B3848;
+    --bg-secondary: #0D1F29;
+    --bg-link: #2573ef;
+    --bg-text: #fff; */
+    --bg-principal: #ffffff;
+    --bg-secondary: #bfc5c9;
+    --bg-link: #2573ef;
+    --bg-text: #000;
+}
+
+.title{
+    text-align: center;    
+    margin-top: 100px;
+}
+
+.nav{    
+    position: fixed;
+    top: 0;
+    background: var(--bg-principal);
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    z-index: 100;     
+    background: #ffffff;
+    box-shadow:  7px 7px 19px #999999,
+             -7px -7px 19px #ffffff;       
+}
+
+.nav_container{         
+    padding: 10px 20px;
+    display: flex;    
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search{
+    width: 70%;
+    height: 50px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: .3s;
+    box-shadow: 0 0 0 3px var(--bg-link);
+    overflow: hidden;    
+}
+
+.search.active{
+    width: 50px;
+}
+
+.search .icon{
+    position: absolute;
+    background: #fff;
+    width: 50px;
+    height: 50px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 200;
+}
+
+.search .icon::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--bg-link);
+    border-radius: 50%;
+    transform: translate(-4px, -4px);
+}
+
+.search .icon::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: var(--bg-link);
+    transform: translate(6px, 6px) rotate(315deg);
+}
+
+.search .input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .input input{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: #000;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.return{
+    border-radius: 50%;        
+    height: 50px;
+    width: 50px;    
+    background: var(--bg-link);
+    border: 2px solid var(--bg-link);
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.return::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;    
+    transform: rotate(225deg);
+    bottom: 7px;
+    background: var(--bg-link);
+}
+
+.home{
+    position: fixed;
+    bottom: 0;
+    margin: 10px;
+    border-radius: 50%;        
+    height: 50px;
+    width: 50px;    
+    background: var(--bg-link);
+    border: 2px solid var(--bg-link);
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.gg-home {
+    color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 18px;
+    height: 14px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: -2px
+    }
+   
+    .gg-home::after,
+    .gg-home::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+    }
+   
+    .gg-home::before {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-top-left-radius: 4px;
+    transform: rotate(45deg);
+    top: -5px;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    left: 0
+    }
+   
+    .gg-home::after {
+    width: 8px;
+    height: 10px;
+    border: 2px solid;
+    border-radius: 100px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+    left: 3px;
+    bottom: 0;
+    } 
+
+.account{
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+/* content */
+
+.content{
+    background: var(--bg-principal); 
+    margin: 30px 0;        
+}
+
+/* cards */
+
+.card{
+    width: 85%;
+    margin: 20px auto;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 10px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow:  7px 7px 19px #999999,
+             -7px -7px 19px #ffffff;
+}    
+
+.card_body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_header{
+    position: relative;    
+    display: flex;
+    align-items: center;        
+}
+
+
+
+.card_text{
+    color: var(--bg-link);
+}
+
+.card_img{
+    background: #000;
+    border-radius: 50%;     
+    height: 50px;
+    width: 50px;
+    display: inline-block;        
+    overflow: hidden;
+}
+
+.card_img img{
+    width: 100%;    
+}
+
+.card_header-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.card_fav{
+    background: #000;
+    border-radius: 50%;     
+    height: 30px;
+    width: 30px;    
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;    
+}
+
+.card_content{
+    padding: 10px 35px;
+}
+
+.card_content p{
+    padding: 5px 0;
+}
+
+.card_footer{
+    display: flex;        
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_footer-placeOfBirth{
+    padding: 0 15px;
+    color: var(--bg-link);    
+}
+
+.card_btn{
+    text-decoration: none;
+    color: var(--bg-link);
+    border: 2px solid var(--bg-link);
+    padding: 5px 10px;    
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.btn-search{
+    height: 50px;
+    width: 50px;    
+    background: var(--bg-link);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid var(--bg-link);
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-search::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    bottom: 7px;
+    background: var(--bg-link);
+}
+
+.desktop{
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+    .desktop{
+        display: flex;
+    }
+    .mobile{
+        display: none;
+    }
+    .card{
+        min-width: 300px;
+        max-width: 10%;        
+    }   
+    .search{
+        width: 35%;
+    }
+    .content{
+        display: flex;     
+        width: 90%;
+        margin: 30px auto;
+        flex-wrap: wrap;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .card{
+        max-height: none;
+    }
+}

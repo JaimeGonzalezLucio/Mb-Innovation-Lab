@@ -1,0 +1,15 @@
+
+.card{
+    height: 95%;
+}
+
+.card-container{
+    border-top: 10px solid #1C8C90;
+    border-radius: 5px;
+}
+
+.card-container img{
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+}

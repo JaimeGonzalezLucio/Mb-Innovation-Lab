@@ -1,0 +1,32 @@
+.btn-form{
+    background-color: #1C8C90;
+    border: none;
+    padding: 10px 30px;    
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+}
+
+label{
+    padding: 10px;
+}
+
+.card-form{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;   
+    box-shadow: 2px 2px 99px -99px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 99px -99px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 99px -99px rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 600px) {  
+    .card-form{
+        box-shadow: -3px 0px 152px 1px rgba(0,0,0,0.59);
+        -webkit-box-shadow: -3px 0px 152px 1px rgba(0,0,0,0.59);
+        -moz-box-shadow: -3px 0px 152px 1px rgba(0,0,0,0.59);     
+    }    
+}

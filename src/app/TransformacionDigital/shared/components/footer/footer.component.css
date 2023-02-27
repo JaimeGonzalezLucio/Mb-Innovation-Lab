@@ -1,0 +1,13 @@
+footer{
+    background-color: var(--primary-color);    
+    position: relative;
+    bottom: 0;
+    width: 100%; 
+    display: flex;   
+    justify-content: end;
+}
+
+footer img{    
+    padding: 30px;
+    float: right;    
+}

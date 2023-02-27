@@ -1,0 +1,143 @@
+<p class="title"></p>      
+
+    <div class="content" id="content">        
+      
+        <div *ngFor="let heroe of data; let i = index;">                       
+            <div  class="card m-3 col-xl-3 col-lg-4 col-md-4 col-sm-12" style="min-width: 500px; max-width: 510px; min-height: 500px;" >
+            <div class="row g-0">
+              <div class="col-md-3 col-lg-4 col-sm-12">
+                <img src="{{heroe.images.sm}}" class="img-fluid rounded-start" alt="{{heroe.name}}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2 class="card-title">{{heroe.name}}</h2>
+                  <h3 class="card-text">{{heroe.biography.fullName}}</h3>        
+                  <hr class="border border-primary border-1 opacity-75">         
+                  <div class="row desktop">
+                    <div class="col-12"  style="max-width: 340px; height: 300px;overflow-y: scroll;">
+                      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                      <h4 id='list-item-1'>Biografia</h4>                            
+                            <p>Primera aparición: {{heroe.biography.firstAppearance}}</p>
+                            <p>Publicado: {{heroe.biography.publisher}}</p>  
+                      <h4 id="list-item-2">Estadisticas</h4>
+                        <p>Combate: {{heroe.powerstats.combat}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.combat+'%'" [attr.aria-valuenow]="heroe.powerstats.combat" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mt-3">Durabilidad: {{heroe.powerstats.durability}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.durability+'%'" [attr.aria-valuenow]="heroe.powerstats.durability" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mt-3">Inteligencia: {{heroe.powerstats.intelligence}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.intelligence+'%'" [attr.aria-valuenow]="heroe.powerstats.intelligence" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p  class="mt-3">Poder: {{heroe.powerstats.power}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.power+'%'" [attr.aria-valuenow]="heroe.powerstats.power" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p  class="mt-3">Velocidad: {{heroe.powerstats.speed}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.speed+'%'" [attr.aria-valuenow]="heroe.powerstats.speed" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p  class="mt-3">Fuerza: {{heroe.powerstats.strength}}</p>
+                        <div class="progress mb-5">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.strength+'%'" [attr.aria-valuenow]="heroe.powerstats.strength" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>   
+                        <h4 id="list-item-3">Apariencia</h4>
+                            <p>Color de ojos: {{heroe.appearance.eyeColor}}</p>
+                            <p>Color de pelo: {{heroe.appearance.hairColor}}</p>
+                            <p>Peso: {{heroe.appearance.weight}}</p>                    
+                        <h4 id="list-item-4">Conexiones</h4>
+                        <p>Grupo: {{heroe.connections.groupAffiliation}}</p>
+                      </div>
+                    </div>
+                  </div>  
+                </div>                
+              </div>
+            </div>
+            <div class="accordion mobile" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" [id]="'heading'+i+1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i+1" aria-expanded="true" [attr.aria-controls]="'collapse'+i+1">
+                      Estadisticas de poder
+                    </button>
+                  </h2>
+                  <div [id]="'collapse'+i+1" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i+1" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Combate: {{heroe.powerstats.combat}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.combat+'%'" [attr.aria-valuenow]="+heroe.powerstats.combat" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p>Durabilidad: {{heroe.powerstats.durability}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.durability+'%'" [attr.aria-valuenow]="+heroe.powerstats.durability" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p>Inteligencia: {{heroe.powerstats.intelligence}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.intelligence+'%'" [attr.aria-valuenow]="+heroe.powerstats.intelligence" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p>Poder: {{heroe.powerstats.power}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.power+'%'" [attr.aria-valuenow]="+heroe.powerstats.power" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p>Velocidad: {{heroe.powerstats.speed}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.speed+'%'" [attr.aria-valuenow]="+heroe.powerstats.speed" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p>Fuerza: {{heroe.powerstats.strength}}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Basic example" [style]="'width:'+heroe.powerstats.strength+'%'" [attr.aria-valuenow]="+heroe.powerstats.strength" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>                    
+                    </div>
+                  </div>
+                </div>                
+                <div class="accordion-item">                                         
+                  <h2 class="accordion-header" [id]="'heading'+i+2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i+2" aria-expanded="false" [attr.aria-controls]="'collapse'+i+2">
+                        Apariencia
+                    </button>
+                  </h2>
+                  <div [id]="'collapse'+i+2" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i+2" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Color de ojos: {{heroe.appearance.eyeColor}}</p>
+                        <p>Color de pelo: {{heroe.appearance.hairColor}}</p>
+                        <p>Peso: {{heroe.appearance.weight}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" [id]="'heading'+i+3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i+3" aria-expanded="false" [attr.aria-controls]="'collapse'+i+3">
+                      Biografia
+                    </button>
+                  </h2>
+                  <div [id]="'collapse'+i+3" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i+3" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">                        
+                        <p>Primera aparición: {{heroe.biography.firstAppearance}}</p>
+                        <p>Publicado: {{heroe.biography.publisher}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" [id]="'heading'+i+4">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i+4" aria-expanded="true" [attr.aria-controls]="'collapse'+i+4">
+                        Conexiones
+                      </button>
+                    </h2>
+                    <div [id]="'collapse'+i+4" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i+4" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>Grupo: {{heroe.connections.groupAffiliation}}</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+    </div>
+
+<div class="home">
+    <div class="gg-home"></div>
+</div>

@@ -1,0 +1,24 @@
+export interface heroe{
+    gender:string;
+    eyeColor:string;
+    hairColor:string;
+    height:string;
+    race:string;
+    weight:string;
+    aliases:string;
+    alignment:string;
+    alterEgos:string;
+    firstAppearance:string;
+    fullName:string;
+    placeOfBirth:string;
+    publisher:string;
+    groupAffiliation:string;
+    images:string;
+    name:string;
+    combat:string;
+    durability:string;
+    intelligence:string;
+    power:string;
+    speed:string;
+    strength:string;
+}
